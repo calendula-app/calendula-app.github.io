@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendula — Calendar and Tasks</title>
+  <meta name="description" content="Calendula is a calm calendar and task planner for iPhone. Events and to-dos on one timeline, synced with Apple Calendar and Reminders.">
+  <meta name="theme-color" content="#110e17">
+  <meta property="og:site_name" content="Calendula">
+  <meta property="og:title" content="Calendula — Calendar and Tasks">
+  <meta property="og:description" content="Let your days bloom. A calm calendar and task planner for iPhone.">
+  
+  <meta property="og:image" content="https://calendula-app.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/icon.png">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <link rel="stylesheet" href="/style.css?v=13">
+  <link rel="stylesheet" href="/agenda.css?v=13">
+</head>
+<body>
+  <main class="wrap">
+    <div class="fold">
+    <section class="hero">
+      <img class="app-icon" src="/icon.png" alt="Calendula app icon" width="96" height="96">
+      <h1>Calendula</h1>
+      <p class="tagline">Let your days bloom</p>
+      <!-- When the app is live, swap for:
+           <a class="store-btn" href="https://apps.apple.com/app/idXXXXXXXXXX">…Download on the App Store</a> -->
+      <span class="store-btn soon">Coming soon</span>
+    </section>
+
+    <ul class="agenda">
+      <li class="block c-green"><strong>Plan by dragging</strong><span>Create, move and resize with a touch.</span></li>
+      <li class="task c-sky done"><div><strong>Tasks on your timeline</strong><span>Drop a to-do right into your day.</span></div></li>
+      <li class="block c-violet"><strong>Alarms that really ring</strong><span>Like an alarm clock, not a ping.</span></li>
+      <li class="task c-rose"><div><strong>Focus sessions</strong><span>A timer for what matters most.</span></div></li>
+      <li class="block c-amber"><strong>Works with Apple Calendar</strong><span>Calendars, reminders and birthdays.</span></li>
+    </ul>
+    </div>
+
+    <footer class="reveal">
+      <nav><a href="/support/">Support</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a></nav>
+      <p>© 2026 Pavel Kutov · <a href="mailto:kut.contact.it@gmail.com">kut.contact.it@gmail.com</a></p>
+    </footer>
+  </main>
+  <script>
+    // Footer waits below the first screen and fades in on the first swipe up.
+    (() => {
+      const f = document.querySelector('footer.reveal');
+      if (!f || !('IntersectionObserver' in window)) return;
+      f.classList.add('hidden');
+      new IntersectionObserver((es, o) => {
+        if (es[0].isIntersecting) { f.classList.remove('hidden'); o.disconnect(); }
+      }, { threshold: 0.2 }).observe(f);
+    })();
+  </script>
+  <script src="/app.js?v=13" defer></script>
+</body>
+</html>
