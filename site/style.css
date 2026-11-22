@@ -139,7 +139,7 @@ h1 {
   background: #ffffff;
   color: #17141c;
   font-weight: 650;
-  box-shadow: 0 8px 24px -8px rgba(255, 140, 64, 0.45);
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.5);
   font-size: 15px;
   line-height: 1.2;
 }
